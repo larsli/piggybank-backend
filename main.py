@@ -3,6 +3,11 @@ from pydantic import BaseModel
 import json
 import os
 
+@app.get("/")
+def root():
+    return {"status": "ok", "service": "piggybank-backend"}
+
+
 app = FastAPI()
 
 DATA_FILE = "data.json"
